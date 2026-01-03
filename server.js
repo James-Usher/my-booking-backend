@@ -9,10 +9,10 @@ app.use(express.json());
 
 // 2. 設定資料庫連線 (自動讀取 Railway 的環境變數)
 const db = mysql.createConnection({
-  host: process.env.MYSQLHOST || 'localhost',
+  host: process.env.MYSQLHOST || 'mysql.railway.internal',
   user: process.env.MYSQLUSER || 'root',
-  password: process.env.MYSQLPASSWORD || '',
-  database: process.env.MYSQLDATABASE || 'booking_system',
+  password: process.env.MYSQLPASSWORD || 'SfIpNnDzHlghqdIIBOHrUagfkhcwaAXp',
+  database: process.env.MYSQLDATABASE || 'railway',
   port: process.env.MYSQLPORT || 3306
 });
 
